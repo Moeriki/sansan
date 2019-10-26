@@ -39,5 +39,9 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "volta": {
+    "node": "12.13.0",
+    "yarn": "1.19.1"
   }
 }
