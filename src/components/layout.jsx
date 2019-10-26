@@ -17,35 +17,14 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <header style={{ background: 'rebeccapurple', marginBottom: '1.45rem' }}>
-        <div
-          style={{
-            margin: '0 auto',
-            maxWidth: 960,
-            padding: '1.45rem 1.0875rem',
-          }}
-        >
-          <h1 style={{ margin: 0 }}>
-            <Link to="/" style={{ color: 'white', textDecoration: 'none' }}>
-              {data.site.siteMetadata.title}
-            </Link>
+      <header>
+        <div className="container mx-auto">
+          <h1>
+            <Link to="/">{data.site.siteMetadata.title}</Link>
           </h1>
         </div>
       </header>
-      <div
-        style={{
-          margin: '0 auto',
-          maxWidth: 960,
-          padding: '0px 1.0875rem 1.45rem',
-          paddingTop: 0,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+      <main className="container mx-auto">{children}</main>
     </>
   );
 };
