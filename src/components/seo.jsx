@@ -26,23 +26,23 @@ function SEO({ description, lang, meta, title }) {
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
       meta={[
-        { content: metaDescription, name: `description` },
-        { content: title, property: `og:title` },
-        { content: metaDescription, property: `og:description` },
-        { content: `website`, property: `og:type` },
-        { content: `summary`, name: `twitter:card` },
-        { content: site.siteMetadata.author, name: `twitter:creator` },
-        { content: title, name: `twitter:title` },
-        { content: metaDescription, name: `twitter:description` },
+        { content: metaDescription, name: 'description' },
+        { content: title, property: 'og:title' },
+        { content: metaDescription, property: 'og:description' },
+        { content: 'website', property: 'og:type' },
+        { content: 'summary', name: 'twitter:card' },
+        { content: site.siteMetadata.author, name: 'twitter:creator' },
+        { content: title, name: 'twitter:title' },
+        { content: metaDescription, name: 'twitter:description' },
       ].concat(meta)}
     />
   );
 }
 
 SEO.defaultProps = {
-  lang: `en`,
+  lang: 'en',
   meta: [],
-  description: ``,
+  description: '',
 };
 
 SEO.propTypes = {
