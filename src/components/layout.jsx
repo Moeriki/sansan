@@ -17,14 +17,20 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <header>
+      <header className="bg-white">
         <div className="container mx-auto">
-          <h1>
-            <Link to="/">{data.site.siteMetadata.title}</Link>
+          <h1 className="text-center">
+            <Link className="block py-6" to="/">
+              <span className="font-title text-2xl">
+                {data.site.siteMetadata.title}
+              </span>
+            </Link>
           </h1>
         </div>
       </header>
-      <main className="container mx-auto">{children}</main>
+      <div className="bg-scp-white p-6">
+        <main className="container mx-auto">{children}</main>
+      </div>
     </>
   );
 };
