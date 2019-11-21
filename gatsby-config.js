@@ -1,6 +1,9 @@
 module.exports = {
   siteMetadata: {
-    author: '@sandycroes',
+    author: 'Dieter Luypaert',
+    email: 'info@sandycroes.be',
+    facebook: 'sandycroesphotography',
+    instagram: 'sandycroes',
     description: 'Capture Your World',
     title: 'Sandy Croes Photography',
   },
@@ -13,6 +16,7 @@ module.exports = {
         path: `${__dirname}/src/content`,
       },
     },
+    'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
@@ -31,19 +35,5 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // 'gatsby-plugin-offline',
     'gatsby-plugin-postcss',
-    {
-      resolve: 'gatsby-source-graphql',
-      options: {
-        // Field under which the remote schema will be accessible. You'll use this in your Gatsby query
-        fieldName: 'scp',
-        // Periodically refetch the data
-        refetchInterval: 60,
-        // Arbitrary name for the remote schema Query type
-        typeName: 'SCP',
-        // Url to query from
-        url:
-          'https://api-euwest.graphcms.com/v1/ck2asfpx30zlv01fmfgi5b5um/master',
-      },
-    },
   ],
 };

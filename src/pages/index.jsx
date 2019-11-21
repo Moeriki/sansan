@@ -8,6 +8,11 @@ import SEO from '../components/seo';
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query PageQuery {
+      introRemark: markdownRemark(
+        id: { eq: "9ceb6ceb-69c8-5839-a4fb-87c64540785e" }
+      ) {
+        html
+      }
       sandyAvatarFile: file(name: { eq: "avatar" }) {
         childImageSharp {
           fluid(maxWidth: 100) {
@@ -15,17 +20,9 @@ const IndexPage = () => {
           }
         }
       }
-      scp {
-        settings(where: { id: "ck2at5icgh2nc0b49ym99rfw5" }) {
-          intro
-        }
-      }
     }
   `);
-  const {
-    sandyAvatarFile,
-    scp: { settings },
-  } = data;
+  const { introRemark, sandyAvatarFile } = data;
   return (
     <Layout>
       <SEO title="Home" />
@@ -37,7 +34,10 @@ const IndexPage = () => {
           style={{ width: 100 }}
         />
       </div>
-      <p className="p-6">{settings.intro}</p>
+      <p
+        className="blog-post-content"
+        dangerouslySetInnerHTML={{ __html: introRemark.html }}
+      />
     </Layout>
   );
 };
