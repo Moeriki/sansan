@@ -1,0 +1,17 @@
+{
+  "build": {
+    "env": {
+      "NPM_RC": "@npm-rc-fa"
+    }
+  },
+  "builds": [
+    {
+      "config": { "distDir": "public" },
+      "src": "package.json",
+      "use": "@now/static-build"
+    }
+  ],
+  "name": "sansan",
+  "regions": ["bru"],
+  "version": 2
+}
