@@ -16,9 +16,7 @@ export default function IndexPage() {
           }
         }
       }
-      introRemark: markdownRemark(
-        id: { eq: "9ceb6ceb-69c8-5839-a4fb-87c64540785e" }
-      ) {
+      introRemark: markdownRemark(fileAbsolutePath: { glob: "**/intro.md" }) {
         html
       }
     }
