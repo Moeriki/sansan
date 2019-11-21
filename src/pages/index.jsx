@@ -36,7 +36,7 @@ export default function IndexPage() {
         />
       </div>
       <p
-        className="my-12"
+        className="my-12 leading-relaxed lg:leading-loose text-lg lg:text-xl"
         dangerouslySetInnerHTML={{ __html: introRemark.html }}
       />
       <InstagramFeed />
