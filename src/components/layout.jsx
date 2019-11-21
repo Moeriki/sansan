@@ -1,9 +1,11 @@
+import { dom } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/pro-solid-svg-icons';
 import { useStaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
+import Helmet from 'react-helmet';
 
 import './layout.css';
 
@@ -40,6 +42,9 @@ export default function Layout({ children }) {
   ];
   return (
     <div className="flex flex-col justify-between h-full">
+      <Helmet>
+        <style>{dom.css()}</style>
+      </Helmet>
       <div>
         <div className="bg-scp-gold h-2" />
         <header className="bg-white">
