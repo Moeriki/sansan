@@ -7,8 +7,9 @@ module.exports = {
     extend: {
       colors: {
         'scp-black': '#1f1f1f',
+        'scp-grey': '#ebeeeb',
+        'scp-gold': '#f3ebe6',
         'scp-white': '#fbfbfb',
-        scp100: '#ebeeeb',
       },
     },
   },

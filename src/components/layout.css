@@ -10,3 +10,10 @@
 p {
   font-family: 'Nunito', sans-serif;
 }
+
+html,
+body,
+#___gatsby,
+#gatsby-focus-wrapper {
+  height: 100%;
+}
