@@ -43,12 +43,20 @@ export default function() {
           </a>
         </div>
       </div>
-      <ul className="flex -mx-3 my-12">
+      <ul className="flex flex-wrap -mx-3 my-12">
         {insta.nodes.map(({ localFile }) => (
-          <li className="px-3 overflow-hidden h-48" key={localFile.id}>
-            <a href={instaUrl} rel="noopener noreferrer" target="_blank">
+          <li
+            className="my-3 px-3 w-1/2 md:w-1/3 xl:w-1/6 text-center"
+            key={localFile.id}
+          >
+            <a
+              className="block"
+              href={instaUrl}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
               <Image
-                className="w-full object-cover"
+                className="max-w-full"
                 fixed={localFile.childImageSharp.fixed}
               />
             </a>
