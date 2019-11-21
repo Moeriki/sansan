@@ -17,6 +17,13 @@ module.exports = {
       },
     },
     'gatsby-transformer-remark',
+    {
+      resolve: `gatsby-source-instagram`,
+      options: {
+        // type: 'user-profile',
+        username: 'sandycroes',
+      },
+    },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {

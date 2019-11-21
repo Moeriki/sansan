@@ -9,7 +9,7 @@ import './layout.css';
 
 export default function Layout({ children }) {
   const data = useStaticQuery(graphql`
-    query ComponentQuery {
+    query LayoutQuery {
       site {
         siteMetadata {
           description
