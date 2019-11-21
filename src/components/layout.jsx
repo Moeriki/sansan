@@ -41,6 +41,7 @@ export default function Layout({ children }) {
   return (
     <div className="flex flex-col justify-between h-full">
       <div>
+        <div className="bg-scp-gold h-2" />
         <header className="bg-white">
           <div className="container mx-auto mt-6">
             <h1 className="text-center">
