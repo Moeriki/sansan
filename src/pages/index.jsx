@@ -6,6 +6,8 @@ import InstagramFeed from '../components/instagram-feed';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
+import styles from './remark.module.css';
+
 export default function IndexPage() {
   const data = useStaticQuery(graphql`
     query {
@@ -33,8 +35,8 @@ export default function IndexPage() {
           style={{ width: 100 }}
         />
       </div>
-      <p
-        className="my-12 leading-relaxed lg:leading-loose text-lg lg:text-xl"
+      <div
+        className={`my-12 leading-relaxed lg:leading-loose text-lg lg:text-xl ${styles.content}`}
         dangerouslySetInnerHTML={{ __html: introRemark.html }}
       />
       <InstagramFeed />
