@@ -46,7 +46,7 @@ export default function Layout({ children }) {
         <style>{dom.css()}</style>
       </Helmet>
       <div>
-        <div className="bg-scp-gold h-2" />
+        <div className="bg-scp-gold h-1" />
         <header className="bg-white">
           <div className="container mx-auto mt-6">
             <h1 className="text-center">
