@@ -13,8 +13,8 @@ export default function IndexPage() {
     query {
       sandyAvatarFile: file(name: { eq: "avatar" }) {
         childImageSharp {
-          fluid(maxWidth: 100) {
-            ...GatsbyImageSharpFluid
+          fixed(width: 100) {
+            ...GatsbyImageSharpFixed
           }
         }
       }
@@ -31,7 +31,7 @@ export default function IndexPage() {
         <Image
           alt="Portret van Sandy Croes"
           className="inline-block rounded-full"
-          fluid={sandyAvatarFile.childImageSharp.fluid}
+          fixed={sandyAvatarFile.childImageSharp.fixed}
           style={{ width: 100 }}
         />
       </div>
