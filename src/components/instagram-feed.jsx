@@ -10,7 +10,7 @@ export default function() {
           localFile {
             id
             childImageSharp {
-              fixed(width: 200, height: 200) {
+              fixed(quality: 90, width: 200, height: 200) {
                 ...GatsbyImageSharpFixed
               }
             }
