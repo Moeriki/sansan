@@ -13,7 +13,7 @@ export default function IndexPage() {
     query {
       sandyAvatarFile: file(name: { eq: "avatar" }) {
         childImageSharp {
-          fixed(width: 100) {
+          fixed(quality: 90, width: 100) {
             ...GatsbyImageSharpFixed
           }
         }
