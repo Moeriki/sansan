@@ -24,14 +24,6 @@ export default function Layout({ children }) {
   } = data;
   const socialLinks = [
     {
-      href: `https://www.facebook.com/${siteMetadata.facebook}`,
-      icon: <i className="fab fa-facebook-f" />,
-    },
-    {
-      href: `https://instagram.com/${siteMetadata.instagram}`,
-      icon: <i className="fab fa-instagram" />,
-    },
-    {
       href: `mailto:${siteMetadata.email}`,
       icon: <i className="fas fa-envelope" />,
     },
