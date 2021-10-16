@@ -2,7 +2,6 @@ import { graphql, useStaticQuery } from 'gatsby';
 import Image from 'gatsby-image';
 import React from 'react';
 
-import InstagramFeed from '../components/instagram-feed';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 
@@ -39,7 +38,6 @@ export default function IndexPage() {
         className={`my-12 leading-relaxed lg:leading-loose text-center text-lg lg:text-xl ${styles.content}`}
         dangerouslySetInnerHTML={{ __html: introRemark.html }}
       />
-      <InstagramFeed />
     </Layout>
   );
 }
