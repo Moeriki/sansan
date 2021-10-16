@@ -1,7 +1,3 @@
-import { dom } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/pro-solid-svg-icons';
 import { useStaticQuery, graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -29,21 +25,24 @@ export default function Layout({ children }) {
   const socialLinks = [
     {
       href: `https://www.facebook.com/${siteMetadata.facebook}`,
-      icon: faFacebookF,
+      icon: <i className="fab fa-facebook-f" />,
     },
     {
       href: `https://instagram.com/${siteMetadata.instagram}`,
-      icon: faInstagram,
+      icon: <i className="fab fa-instagram" />,
     },
     {
       href: `mailto:${siteMetadata.email}`,
-      icon: faEnvelope,
+      icon: <i className="fas fa-envelope" />,
     },
   ];
   return (
     <div className="flex flex-col justify-between h-full">
       <Helmet>
-        <style>{dom.css()}</style>
+        <script
+          src="https://kit.fontawesome.com/14c296eb88.js"
+          crossOrigin="anonymous"
+        />
       </Helmet>
       <div>
         <div className="bg-scp-gold h-1" />
@@ -54,8 +53,13 @@ export default function Layout({ children }) {
             </h1>
             <div className="mt-1 text-center">
               {socialLinks.map(({ href, icon }) => (
-                <a href={href} rel="noopener noreferrer" target="_blank">
-                  <FontAwesomeIcon className="mx-3" icon={icon} />
+                <a
+                  className="inline-block mx-3"
+                  href={href}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  {icon}
                 </a>
               ))}
             </div>
@@ -69,8 +73,13 @@ export default function Layout({ children }) {
         <div className="h-32 flex justify-around items-center">
           <div className="text-scp-white">
             {socialLinks.map(({ href, icon }) => (
-              <a href={href} rel="noopener noreferrer" target="_blank">
-                <FontAwesomeIcon className="mx-3" icon={icon} />
+              <a
+                className="inline-block mx-3"
+                href={href}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                {icon}
               </a>
             ))}
           </div>
