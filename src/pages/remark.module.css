@@ -1,8 +1,8 @@
 .content {
-  & a {
-    text-decoration: underline;
-  }
-  & p + p {
-    @apply mt-6;
-  }
+	& a {
+		text-decoration: underline;
+	}
+	& p + p {
+		@apply mt-6;
+	}
 }
