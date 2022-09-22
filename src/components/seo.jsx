@@ -48,6 +48,6 @@ SEO.defaultProps = {
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
+  meta: PropTypes.arrayOf(PropTypes.object), // eslint-disable-line react/forbid-prop-types
   title: PropTypes.string.isRequired,
 };
