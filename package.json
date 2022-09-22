@@ -2,6 +2,9 @@
   "name": "sansan",
   "private": true,
   "version": "0.1.0",
+  "engines": {
+    "node": "^14"
+  },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
